@@ -1,0 +1,23 @@
+ea4bc82a6ad023ab7ee23ee620429895
+::res://::1726169246
+icon.svg::CompressedTexture2D::4776343888231154917::1726168764::1726169084::1::::<><>::
+main.tscn::PackedScene::5127736330340242942::1726168970::0::1::::<><>::uid://cxhmbcu2y6onb::::res://actors/player/player.tscn
+::res://actors/::1726168975
+::res://actors/player/::1726168975
+player.gd::GDScript::-1::1726168970::0::1::::<>CharacterBody2D<>::
+player.tscn::PackedScene::6402365942249320011::1726168970::0::1::::<><>::res://actors/player/player.gd<>uid://cpjjhmw4gdy70::::res://actors/projectile/projectile.tscn
+::res://actors/projectile/::1726168975
+projectile.gd::GDScript::-1::1726168970::0::1::::<>Area2D<>::
+projectile.tscn::PackedScene::5844813040827149265::1726168970::0::1::::<><>::res://actors/projectile/projectile.gd
+::res://assets/::1726169264
+::res://assets/Pixel Art Top Down - Basic/::1726169264
+::res://assets/Pixel Art Top Down - Basic/Texture/::1726169264
+TX Plant.png::CompressedTexture2D::9196047259070860953::1726169264::1726169264::1::::<><>::
+TX Player.png::CompressedTexture2D::4520068647283979904::1726169264::1726169264::1::::<><>::
+TX Props.png::CompressedTexture2D::2576307151990687592::1726169264::1726169264::1::::<><>::
+TX Shadow Plant.png::CompressedTexture2D::7873882956384707907::1726169264::1726169264::1::::<><>::
+TX Shadow.png::CompressedTexture2D::5088170430576905009::1726169264::1726169264::1::::<><>::
+TX Struct.png::CompressedTexture2D::2992841106480800047::1726169264::1726169264::1::::<><>::
+TX Tileset Grass.png::CompressedTexture2D::4410110714515574587::1726169264::1726169264::1::::<><>::
+TX Tileset Stone Ground.png::CompressedTexture2D::3954710913779847376::1726169264::1726169264::1::::<><>::
+TX Tileset Wall.png::CompressedTexture2D::1613672749179812767::1726169264::1726169264::1::::<><>::
