@@ -29,3 +29,8 @@ shape = SubResource("RectangleShape2D_5wg87")
 
 [node name="ProjectileRefPoint" type="Node2D" parent="."]
 position = Vector2(33, 0)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(2, 2)
+position_smoothing_enabled = true
+position_smoothing_speed = 8.0
