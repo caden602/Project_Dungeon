@@ -1,7 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://cxhmbcu2y6onb"]
+[gd_scene load_steps=8 format=3 uid="uid://cxhmbcu2y6onb"]
 
 [ext_resource type="Script" path="res://actors/player/player.gd" id="1_hxo5q"]
 [ext_resource type="PackedScene" uid="uid://cpjjhmw4gdy70" path="res://actors/projectile/projectile.tscn" id="2_d25ch"]
+[ext_resource type="Texture2D" uid="uid://c273ojc8x6g65" path="res://assets/light/Light.png" id="3_2frx0"]
+[ext_resource type="Script" path="res://actors/player/light.gd" id="4_3tryy"]
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_gge8m"]
 
@@ -34,3 +36,20 @@ position = Vector2(33, 0)
 zoom = Vector2(2, 2)
 position_smoothing_enabled = true
 position_smoothing_speed = 8.0
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+shadow_enabled = true
+texture = ExtResource("3_2frx0")
+offset = Vector2(420, -8)
+script = ExtResource("4_3tryy")
+
+[node name="Area2D" type="Area2D" parent="PointLight2D"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="PointLight2D/Area2D"]
+polygon = PackedVector2Array(40, 33, 713, 245, 758, 227, 827, 79, 830, -75, 791, -203, 715, -263, 39, -34, 8, -18, 8, 16)
+
+[node name="RayCast2D" type="RayCast2D" parent="PointLight2D"]
+target_position = Vector2(830, 0)
+
+[connection signal="body_entered" from="PointLight2D/Area2D" to="PointLight2D" method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="PointLight2D/Area2D" to="PointLight2D" method="_on_area_2d_body_exited"]

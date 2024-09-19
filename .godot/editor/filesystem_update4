@@ -1,2 +1,5 @@
 res://main.tscn
 res://actors/player/player.tscn
+res://actors/player/light.gd
+res://actors/enemies/angel.tscn
+res://actors/player/player.gd

@@ -1,15 +1,20 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1726169361
+::res://::1726775037
 icon.svg::CompressedTexture2D::4776343888231154917::1726168764::1726169084::1::::<><>::
-main.tscn::PackedScene::5127736330340242942::1726168970::0::1::::<><>::uid://cxhmbcu2y6onb::::res://actors/player/player.tscn
-::res://actors/::1726168975
-::res://actors/player/::1726168975
+main.tscn::PackedScene::5127736330340242942::1726774591::0::1::::<><>::uid://cxhmbcu2y6onb::::res://actors/player/player.tscn<>uid://bwlxrmw0rv65a::::res://assets/Pixel Art Top Down - Basic/Texture/TX Tileset Stone Ground.png<>uid://b33j45j3hl1f8::::res://assets/Pixel Art Top Down - Basic/Texture/TX Tileset Grass.png<>uid://w8w7pkp0b360::::res://assets/Pixel Art Top Down - Basic/Texture/TX Tileset Wall.png<>uid://biv0wkcfjum20::::res://assets/Pixel Art Top Down - Basic/Texture/TX Struct.png<>uid://ceq0onxgy1xhx::::res://assets/Pixel Art Top Down - Basic/Texture/TX Shadow.png<>uid://dkgfx4nugs2qh::::res://assets/Pixel Art Top Down - Basic/Texture/TX Shadow Plant.png<>uid://bcx8nxfsm4a7a::::res://assets/Pixel Art Top Down - Basic/Texture/TX Props.png<>uid://d4avs4l08gj7v::::res://assets/Pixel Art Top Down - Basic/Texture/TX Plant.png
+::res://actors/::1726775037
+::res://actors/enemies/::1726775037
+angle.tscn::PackedScene::8390618878580953496::1726775032::0::1::::<><>::
+::res://actors/player/::1726774971
+light.gd::GDScript::-1::1726774956::0::1::::<>PointLight2D<>::
 player.gd::GDScript::-1::1726168970::0::1::::<>CharacterBody2D<>::
-player.tscn::PackedScene::6402365942249320011::1726168970::0::1::::<><>::res://actors/player/player.gd<>uid://cpjjhmw4gdy70::::res://actors/projectile/projectile.tscn
+player.tscn::PackedScene::6402365942249320011::1726774969::0::1::::<><>::res://actors/player/player.gd<>uid://cpjjhmw4gdy70::::res://actors/projectile/projectile.tscn<>uid://c273ojc8x6g65::::res://assets/light/Light.png<>res://actors/player/light.gd<>uid://cabxxla2kmhsf::::res://icon.svg
 ::res://actors/projectile/::1726168975
 projectile.gd::GDScript::-1::1726168970::0::1::::<>Area2D<>::
 projectile.tscn::PackedScene::5844813040827149265::1726168970::0::1::::<><>::res://actors/projectile/projectile.gd
-::res://assets/::1726169269
+::res://assets/::1726773262
+::res://assets/light/::1726773262
+Light.png::CompressedTexture2D::6735725787986210140::1726773259::1726773259::1::::<><>::
 ::res://assets/Pixel Art Top Down - Basic/::1726169269
 ::res://assets/Pixel Art Top Down - Basic/Texture/::1726169269
 TX Plant.png::CompressedTexture2D::9196047259070860953::1726169264::1726169264::1::::<><>::
