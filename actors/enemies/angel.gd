@@ -28,5 +28,6 @@ func _on_detection_area_body_exited(body:Node2D):
 func in_light(state:bool):
 	if (state):
 		player_chase = false
+		remove_from_group("angel")
 	else:
 		player_chase = true

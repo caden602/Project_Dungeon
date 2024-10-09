@@ -1,9 +1,8 @@
-res://actors/player/player.tscn
-res://actors/player/player.gd
+res://grate.tscn
 res://main.tscn
-res://actors/enemies/angel.tscn
-res://actors/enemies/skeleton.tscn
+res://actors/player/player.tscn
 res://actors/enemies/slime.tscn
+res://actors/enemies/angel.tscn
 res://actors/enemies/slime.gd
-res://actors/enemies/angel.gd
 res://actors/player/light.gd
+res://actors/enemies/angel.gd

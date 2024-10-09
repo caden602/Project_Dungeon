@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=4 uid="uid://cfb6ck3dqnv4i"]
+[gd_scene load_steps=35 format=4 uid="uid://cfb6ck3dqnv4i"]
 
 [ext_resource type="PackedScene" uid="uid://cxhmbcu2y6onb" path="res://actors/player/player.tscn" id="1_8f6ji"]
 [ext_resource type="Texture2D" uid="uid://bwlxrmw0rv65a" path="res://assets/Pixel Art Top Down - Basic/Texture/TX Tileset Stone Ground.png" id="2_ccu05"]
@@ -11,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://d4avs4l08gj7v" path="res://assets/Pixel Art Top Down - Basic/Texture/TX Plant.png" id="8_od1l7"]
 [ext_resource type="PackedScene" uid="uid://drsqjcx7qcsd1" path="res://actors/enemies/angel.tscn" id="10_tp6yb"]
 [ext_resource type="PackedScene" uid="uid://cboaphbpphp0k" path="res://actors/enemies/slime.tscn" id="11_q0c3n"]
+[ext_resource type="PackedScene" uid="uid://cy8mvlabpurs4" path="res://grate.tscn" id="12_b1h5p"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4gynb"]
 texture = ExtResource("2_j88ax")
@@ -804,3 +805,6 @@ position = Vector2(499, 562)
 
 [node name="Slime" parent="." instance=ExtResource("11_q0c3n")]
 position = Vector2(957, 193)
+
+[node name="Grate" parent="." instance=ExtResource("12_b1h5p")]
+position = Vector2(909, 376)

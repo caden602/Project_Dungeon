@@ -3,22 +3,6 @@
 [ext_resource type="Script" path="res://actors/enemies/angel.gd" id="1_jlgh8"]
 [ext_resource type="Texture2D" uid="uid://b5ns4t8skrvae" path="res://assets/Pixel Art Top Down - Basic/Texture/TX Player.png" id="1_lm2yl"]
 
-[sub_resource type="Animation" id="Animation_dcne8"]
-resource_name = "downward_angel"
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [0]
-}
-
 [sub_resource type="Animation" id="Animation_ab5l0"]
 length = 0.001
 tracks/0/type = "value"
@@ -44,6 +28,22 @@ tracks/1/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_dcne8"]
+resource_name = "downward_angel"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
 }
 
 [sub_resource type="Animation" id="Animation_cyqe5"]

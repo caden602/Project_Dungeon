@@ -1,19 +1,24 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1727380959
+::res://::1727809418
+grate.tscn::PackedScene::6526264763991290741::1727807569::0::1::::<><>::uid://cabxxla2kmhsf::::res://icon.svg
 icon.svg::CompressedTexture2D::4776343888231154917::1726168764::1726169084::1::::<><>::
-main.tscn::PackedScene::5127736330340242942::1727380671::0::1::::<><>::uid://cxhmbcu2y6onb::::res://actors/player/player.tscn<>uid://bwlxrmw0rv65a::::res://assets/Pixel Art Top Down - Basic/Texture/TX Tileset Stone Ground.png<>uid://b33j45j3hl1f8::::res://assets/Pixel Art Top Down - Basic/Texture/TX Tileset Grass.png<>uid://w8w7pkp0b360::::res://assets/Pixel Art Top Down - Basic/Texture/TX Tileset Wall.png<>uid://biv0wkcfjum20::::res://assets/Pixel Art Top Down - Basic/Texture/TX Struct.png<>uid://ceq0onxgy1xhx::::res://assets/Pixel Art Top Down - Basic/Texture/TX Shadow.png<>uid://dkgfx4nugs2qh::::res://assets/Pixel Art Top Down - Basic/Texture/TX Shadow Plant.png<>uid://bcx8nxfsm4a7a::::res://assets/Pixel Art Top Down - Basic/Texture/TX Props.png<>uid://d4avs4l08gj7v::::res://assets/Pixel Art Top Down - Basic/Texture/TX Plant.png<>uid://drsqjcx7qcsd1::::res://actors/enemies/angel.tscn
-::res://actors/::1727380957
-::res://actors/enemies/::1727380957
-angel.tscn::PackedScene::8390618878580953496::1727380672::0::1::::<><>::uid://cabxxla2kmhsf::::res://icon.svg
-skeleton.tscn::PackedScene::4871958656399769952::1727381123::0::1::::<><>::uid://dt8yegroc5q0s::::res://assets/mystic_woods_free_2.2/sprites/characters/slime.png
-::res://actors/player/::1727380700
-light.gd::GDScript::-1::1726778818::0::1::::<>PointLight2D<>::
-player.gd::GDScript::-1::1727380540::0::1::::<>CharacterBody2D<>::
-player.tscn::PackedScene::6402365942249320011::1727380700::0::1::::<><>::res://actors/player/player.gd<>uid://cpjjhmw4gdy70::::res://actors/projectile/projectile.tscn<>uid://c273ojc8x6g65::::res://assets/light/Light.png<>uid://cr8to4vsd65w7::::res://assets/mystic_woods_free_2.2/sprites/characters/player.png<>res://actors/player/light.gd
+main.tscn::PackedScene::5127736330340242942::1727807583::0::1::::<><>::uid://cxhmbcu2y6onb::::res://actors/player/player.tscn<>uid://bwlxrmw0rv65a::::res://assets/Pixel Art Top Down - Basic/Texture/TX Tileset Stone Ground.png<>uid://b33j45j3hl1f8::::res://assets/Pixel Art Top Down - Basic/Texture/TX Tileset Grass.png<>uid://w8w7pkp0b360::::res://assets/Pixel Art Top Down - Basic/Texture/TX Tileset Wall.png<>uid://biv0wkcfjum20::::res://assets/Pixel Art Top Down - Basic/Texture/TX Struct.png<>uid://ceq0onxgy1xhx::::res://assets/Pixel Art Top Down - Basic/Texture/TX Shadow.png<>uid://dkgfx4nugs2qh::::res://assets/Pixel Art Top Down - Basic/Texture/TX Shadow Plant.png<>uid://bcx8nxfsm4a7a::::res://assets/Pixel Art Top Down - Basic/Texture/TX Props.png<>uid://d4avs4l08gj7v::::res://assets/Pixel Art Top Down - Basic/Texture/TX Plant.png<>uid://drsqjcx7qcsd1::::res://actors/enemies/angel.tscn<>uid://cboaphbpphp0k::::res://actors/enemies/slime.tscn<>uid://cy8mvlabpurs4::::res://grate.tscn
+::res://actors/::1727807420
+::res://actors/enemies/::1727807569
+angel.gd::GDScript::-1::1727384392::0::1::::<>CharacterBody2D<>::
+angel.tscn::PackedScene::8390618878580953496::1727807569::0::1::::<><>::res://actors/enemies/angel.gd<>uid://b5ns4t8skrvae::::res://assets/Pixel Art Top Down - Basic/Texture/TX Player.png
+slime.gd::GDScript::-1::1727807439::0::1::::<>CharacterBody2D<>::
+slime.tscn::PackedScene::4871958656399769952::1727807569::0::1::::<><>::uid://dt8yegroc5q0s::::res://assets/mystic_woods_free_2.2/sprites/characters/slime.png<>res://actors/enemies/slime.gd
+::res://actors/player/::1727807569
+light.gd::GDScript::-1::1727804145::0::1::::<>PointLight2D<>::
+player.gd::GDScript::-1::1727804095::0::1::::<>CharacterBody2D<>::
+player.tscn::PackedScene::6402365942249320011::1727807569::0::1::::<><>::res://actors/player/player.gd<>uid://cpjjhmw4gdy70::::res://actors/projectile/projectile.tscn<>uid://c273ojc8x6g65::::res://assets/light/Light.png<>uid://cr8to4vsd65w7::::res://assets/mystic_woods_free_2.2/sprites/characters/player.png<>res://actors/player/light.gd
 ::res://actors/projectile/::1726168975
 projectile.gd::GDScript::-1::1726168970::0::1::::<>Area2D<>::
 projectile.tscn::PackedScene::5844813040827149265::1726168970::0::1::::<><>::res://actors/projectile/projectile.gd
-::res://assets/::1727378531
+::res://assets/::1727810638
+::res://assets/grate/::1727810662
+Grate.png::CompressedTexture2D::8663417575010278663::1727810662::1727810662::1::::<><>::
 ::res://assets/light/::1726773262
 Light.png::CompressedTexture2D::6735725787986210140::1726773259::1726773259::1::::<><>::
 ::res://assets/mystic_woods_free_2.2/::1727378531

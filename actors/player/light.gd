@@ -10,11 +10,18 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
+	look_at(get_viewport().get_mouse_position())
 	if enemyInLight:
-		if $RayCast2D.get_collider() and $RayCast2D.get_collider().is_in_group("angel"):
+		if ($RayCast2D.get_collider().is_in_group("angel")):
 			$RayCast2D.get_collider().in_light(true)
 			print("Hitting Enemy ", count)
 			count+= 1 
+		elif ($RayCast2D/RayCast2D2.get_collider().is_in_group("angel")):
+			$RayCast2D/RayCast2D2.get_collider().in_light(true)
+			enemyInLight = null
+		elif ($RayCast2D/RayCast2D3.get_collider().is_in_group("angel")):
+			$RayCast2D/RayCast2D3.get_collider().in_light(true)
+			enemyInLight = null
 		# else:
 			# $RayCast2D.get_collider().in_light(false)
 
