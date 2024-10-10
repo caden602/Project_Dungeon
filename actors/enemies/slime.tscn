@@ -4,6 +4,7 @@
 [ext_resource type="Script" path="res://actors/enemies/slime.gd" id="1_yx4gy"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_24bip"]
+radius = 5.0
 
 [sub_resource type="Animation" id="Animation_4k442"]
 length = 0.001
@@ -165,9 +166,10 @@ _data = {
 }
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_urswt"]
-radius = 210.038
+radius = 78.0256
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_aww47"]
+radius = 8.0
 
 [node name="Slime" type="CharacterBody2D"]
 collision_layer = 0
@@ -182,7 +184,7 @@ shape = SubResource("CircleShape2D_24bip")
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture_filter = 1
 position = Vector2(0, -6)
-scale = Vector2(2, 2)
+scale = Vector2(1.5, 1.5)
 texture = ExtResource("1_myhru")
 offset = Vector2(0, -3)
 flip_h = true
@@ -205,12 +207,10 @@ shape = SubResource("CircleShape2D_urswt")
 metadata/_edit_lock_ = true
 
 [node name="Area2D" type="Area2D" parent="."]
-metadata/_edit_lock_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(0, -4)
+position = Vector2(0, -5)
 shape = SubResource("CircleShape2D_aww47")
-metadata/_edit_lock_ = true
 
 [connection signal="animation_finished" from="Sprite2D/AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
 [connection signal="body_entered" from="detection_area" to="." method="_on_detection_area_body_entered"]
