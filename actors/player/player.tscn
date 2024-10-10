@@ -159,6 +159,7 @@ radius = 9.0
 height = 18.0
 
 [node name="Player" type="CharacterBody2D"]
+y_sort_enabled = true
 collision_layer = 3
 motion_mode = 1
 script = ExtResource("1_hxo5q")
@@ -166,9 +167,10 @@ projectile_scene = ExtResource("2_d25ch")
 
 [node name="MainSprite" type="Sprite2D" parent="."]
 texture_filter = 1
-position = Vector2(0, -16)
+position = Vector2(0, -6)
 scale = Vector2(2, 2)
 texture = ExtResource("3_4fcjd")
+offset = Vector2(0, -13)
 hframes = 6
 vframes = 10
 frame = 24
@@ -185,21 +187,25 @@ libraries = {
 }
 
 [node name="MainCollider" type="CollisionShape2D" parent="."]
-position = Vector2(0, 13)
+position = Vector2(0, -3)
 shape = SubResource("CapsuleShape2D_dflf3")
 
 [node name="ProjectileRefPoint" type="Node2D" parent="."]
 position = Vector2(33, 0)
+metadata/_edit_lock_ = true
 
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(2, 2)
 position_smoothing_enabled = true
 position_smoothing_speed = 8.0
+metadata/_edit_lock_ = true
 
 [node name="PointLight2D" type="PointLight2D" parent="."]
+y_sort_enabled = true
+position = Vector2(0, -15)
 shadow_enabled = true
 texture = ExtResource("3_2frx0")
-offset = Vector2(420, -8)
+offset = Vector2(447, -8)
 script = ExtResource("4_3tryy")
 
 [node name="Area2D" type="Area2D" parent="PointLight2D"]

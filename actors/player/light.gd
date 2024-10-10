@@ -12,18 +12,15 @@ func _ready():
 func _process(delta):
 	look_at(get_viewport().get_mouse_position())
 	if enemyInLight:
-		if ($RayCast2D.get_collider().is_in_group("angel")):
-			$RayCast2D.get_collider().in_light(true)
-			print("Hitting Enemy ", count)
-			count+= 1 
-		elif ($RayCast2D/RayCast2D2.get_collider().is_in_group("angel")):
-			$RayCast2D/RayCast2D2.get_collider().in_light(true)
-			enemyInLight = null
-		elif ($RayCast2D/RayCast2D3.get_collider().is_in_group("angel")):
-			$RayCast2D/RayCast2D3.get_collider().in_light(true)
-			enemyInLight = null
-		# else:
-			# $RayCast2D.get_collider().in_light(false)
+		if ($RayCast2D.get_collider()):
+			if ($RayCast2D.get_collider().is_in_group("angel")):
+				$RayCast2D.get_collider().in_light(true)
+		if ($RayCast2D/RayCast2D2.get_collider()):
+			if ($RayCast2D/RayCast2D2.get_collider().is_in_group("angel")):
+				$RayCast2D/RayCast2D2.get_collider().in_light(true)
+		if ($RayCast2D/RayCast2D3.get_collider()):
+			if ($RayCast2D/RayCast2D3.get_collider().is_in_group("angel")):
+				$RayCast2D/RayCast2D3.get_collider().in_light(true)
 
 func _on_area_2d_body_entered(body:Node2D):
 	if body.is_in_group("angel"):

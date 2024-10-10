@@ -113,18 +113,18 @@ _data = {
 [sub_resource type="CircleShape2D" id="CircleShape2D_axph6"]
 radius = 395.001
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_8fbqs"]
-radius = 19.0
-height = 38.0
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d037g"]
+size = Vector2(42, 24)
 
 [node name="Angel" type="CharacterBody2D" groups=["angel"]]
+y_sort_enabled = true
 script = ExtResource("1_jlgh8")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture_filter = 1
 scale = Vector2(2, 2)
 texture = ExtResource("1_lm2yl")
-offset = Vector2(0, 8)
+offset = Vector2(0, 13)
 flip_h = true
 hframes = 4
 
@@ -136,13 +136,16 @@ libraries = {
 [node name="detection_area" type="Area2D" parent="."]
 collision_layer = 2
 collision_mask = 2
+metadata/_edit_lock_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="detection_area"]
+y_sort_enabled = true
 shape = SubResource("CircleShape2D_axph6")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(1, -15)
-shape = SubResource("CapsuleShape2D_8fbqs")
+y_sort_enabled = true
+position = Vector2(-1, 2)
+shape = SubResource("RectangleShape2D_d037g")
 
 [connection signal="body_entered" from="detection_area" to="." method="_on_detection_area_body_entered"]
 [connection signal="body_exited" from="detection_area" to="." method="_on_detection_area_body_exited"]

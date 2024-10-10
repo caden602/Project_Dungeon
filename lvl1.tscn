@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://cfr1mvqy6ty10"]
+
+[ext_resource type="PackedScene" uid="uid://drsqjcx7qcsd1" path="res://actors/enemies/angel.tscn" id="1_d038w"]
+[ext_resource type="PackedScene" uid="uid://cboaphbpphp0k" path="res://actors/enemies/slime.tscn" id="2_4bg67"]
+[ext_resource type="PackedScene" uid="uid://cxhmbcu2y6onb" path="res://actors/player/player.tscn" id="3_cnerv"]
+
+[node name="Node2D" type="Node2D"]
+y_sort_enabled = true
+
+[node name="Angel" parent="." instance=ExtResource("1_d038w")]
+position = Vector2(88, 600)
+
+[node name="Slime" parent="." instance=ExtResource("2_4bg67")]
+y_sort_enabled = true
+position = Vector2(1068, 196)
+
+[node name="Player" parent="." instance=ExtResource("3_cnerv")]
+position = Vector2(427, 120)
