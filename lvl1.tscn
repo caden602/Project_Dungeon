@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=4 uid="uid://cfr1mvqy6ty10"]
+[gd_scene load_steps=39 format=4 uid="uid://cfr1mvqy6ty10"]
 
 [ext_resource type="PackedScene" uid="uid://drsqjcx7qcsd1" path="res://actors/enemies/angel.tscn" id="1_d038w"]
 [ext_resource type="Texture2D" uid="uid://b33j45j3hl1f8" path="res://assets/Pixel Art Top Down - Basic/Texture/TX Tileset Grass.png" id="1_x4dvo"]
@@ -11,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://dkgfx4nugs2qh" path="res://assets/Pixel Art Top Down - Basic/Texture/TX Shadow Plant.png" id="6_iu048"]
 [ext_resource type="Texture2D" uid="uid://bcx8nxfsm4a7a" path="res://assets/Pixel Art Top Down - Basic/Texture/TX Props.png" id="7_gyo0o"]
 [ext_resource type="Texture2D" uid="uid://d4avs4l08gj7v" path="res://assets/Pixel Art Top Down - Basic/Texture/TX Plant.png" id="8_3x363"]
+[ext_resource type="PackedScene" uid="uid://cy8mvlabpurs4" path="res://grate.tscn" id="12_8jcp4"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_84bj2"]
 texture = ExtResource("1_x4dvo")
@@ -140,6 +141,12 @@ polygon = PackedVector2Array(8.0534, -16, 7.92854, 16, 16, 16, 16, -16)
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_inqk6"]
 polygon = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
 
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_dh5m3"]
+polygon = PackedVector2Array(8.12255, -16, 8.29913, 16, 16, 16, 16, -16)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_0fb8p"]
+polygon = PackedVector2Array(-16, -16, -8.24069, -16, -7.99097, 16, -16, 16)
+
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_wirgg"]
 polygon = PackedVector2Array(-16, -16, -7.94597, -16, -8.12255, 16, -16, 16)
 
@@ -230,7 +237,7 @@ texture_region_size = Vector2i(32, 32)
 3:1/0/occlusion_layer_0/polygon = SubResource("OccluderPolygon2D_inqk6")
 3:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, 8.03125, 16, 8.03125, -7.59375, -16, -7.71875)
 4:1/0 = 0
-4:1/0/occlusion_layer_0/polygon = SubResource("OccluderPolygon2D_inqk6")
+4:1/0/occlusion_layer_0/polygon = SubResource("OccluderPolygon2D_dh5m3")
 4:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(16, -16, 7.90625, -16, 7.96875, 16, 16, 16)
 5:1/0 = 0
 5:1/0/occlusion_layer_0/polygon = SubResource("OccluderPolygon2D_inqk6")
@@ -242,7 +249,7 @@ texture_region_size = Vector2i(32, 32)
 7:1/0/occlusion_layer_0/polygon = SubResource("OccluderPolygon2D_inqk6")
 7:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
 8:1/0 = 0
-8:1/0/occlusion_layer_0/polygon = SubResource("OccluderPolygon2D_inqk6")
+8:1/0/occlusion_layer_0/polygon = SubResource("OccluderPolygon2D_0fb8p")
 8:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, -8.03125, -16, -8.09375, 16, -16, 16)
 9:1/0 = 0
 9:1/0/occlusion_layer_0/polygon = SubResource("OccluderPolygon2D_wirgg")
@@ -793,20 +800,35 @@ tile_map_data = PackedByteArray("AAACAAMAAgAJAAEAAAACAAQAAgAJAAIAAAACAAUAAgAJAAM
 tile_set = SubResource("TileSet_uwrux")
 
 [node name="Roofs" type="TileMapLayer" parent="."]
-tile_map_data = PackedByteArray("AAAGAAUAAQABAAEAAAAGAAQAAQABAAEAAAAGAAMAAQABAAEAAAAHAAMAAQABAAEAAAAHAAIAAQABAAEAAAAHAAEAAQABAAEAAAAGAAEAAQABAAEAAAAGAAAAAQABAAEAAAAGAAIAAQABAAEAAAAHAAAAAQABAAEAAAAHAAQAAQABAAEAAAAHAAUAAQABAAEAAAAGAP//AQABAAEAAAAHAP//AQABAAEAAAAGAAYAAQABAAEAAAAHAAYAAQABAAEAAAADAP7/AQABAAEAAAAEAP7/AQABAAEAAAAFAP7/AQABAAEAAAAGAP7/AQABAAEAAAAHAP7/AQABAAEAAAAIAP7/AQABAAEAAAAJAP7/AQABAAEAAAAKAP7/AQABAAEAAAALAP7/AQACAAEAAAACAP7/AQAAAAEAAAA=")
+z_index = 2
+tile_map_data = PackedByteArray("AAAGAAUAAQABAAEAAAAGAAQAAQABAAEAAAAGAAMAAQABAAEAAAAHAAMAAQABAAEAAAAHAAIAAQABAAEAAAAHAAEAAQABAAEAAAAGAAEAAQABAAEAAAAGAAAAAQABAAEAAAAGAAIAAQABAAEAAAAHAAAAAQABAAEAAAAHAAQAAQABAAEAAAAHAAUAAQABAAEAAAAGAAYAAQABAAEAAAAHAAYAAQABAAEAAAADAP7/AQABAAEAAAAEAP7/AQABAAEAAAAFAP7/AQABAAEAAAAGAP7/AQABAAEAAAAHAP7/AQABAAEAAAAIAP7/AQABAAEAAAAJAP7/AQABAAEAAAAKAP7/AQABAAEAAAALAP7/AQACAAEAAAACAP7/AQAAAAEAAAAGAP//AQABAAEAAAAHAP//AQABAAEAAAA=")
+tile_set = SubResource("TileSet_uwrux")
+
+[node name="Crowning" type="TileMapLayer" parent="."]
+z_index = 2
+tile_map_data = PackedByteArray("AAAGAAUAAgAJAAIAAAAGAAQAAgAJAAEAAAAGAAMAAgAJAAMAAAAHAAMAAgAKAAMAAAAHAAIAAgAKAAIAAAAHAAEAAgAKAAMAAAAGAAEAAgAJAAEAAAAGAAAAAgAJAAMAAAAGAAIAAgAJAAIAAAAHAAAAAgAKAAIAAAAHAAQAAgAKAAEAAAAHAAUAAgAKAAIAAAAGAAYAAgAJAAMAAAAHAAYAAgAKAAMAAAAGAP//AgAIAAEAAAAHAP//AgAEAAEAAAA=")
 tile_set = SubResource("TileSet_uwrux")
 
 [node name="Upper_Walls" type="TileMapLayer" parent="."]
-tile_map_data = PackedByteArray("AAAGAAUAAgAJAAIAAAAGAAIAAgAJAAIAAAAGAAMAAgAJAAMAAAAGAAQAAgAJAAEAAAAHAAIAAgAKAAIAAAAHAAMAAgAKAAMAAAAHAAQAAgAKAAEAAAAGAAAAAgAJAAEAAAAGAAEAAgAJAAIAAAAHAAUAAgAKAAIAAAAHAAAAAgAKAAEAAAAHAAEAAgAKAAIAAAAGAP//AgAIAAEAAAAHAP//AgAEAAEAAAADAP//AwANAAQAAAADAAAAAwANAAUAAAAEAP//AwAOAAQAAAAEAAAAAwAOAAUAAAAJAP//AwANAAQAAAAJAAAAAwANAAUAAAAKAP//AwAOAAQAAAAKAAAAAwAOAAUAAAAIAP//AgAFAAEAAAAIAAAAAgACAAQAAAALAP//AgADAAMAAAALAAAAAgADAAQAAAAFAP//AgAHAAEAAAAFAAAAAgAHAAIAAAACAP//AgABAAMAAAACAAAAAgABAAQAAAAGAAYAAgAJAAMAAAAGAAcAAgAMAAMAAAAGAAgAAgAMAAQAAAAHAAYAAgAKAAMAAAAHAAcAAgANAAMAAAAHAAgAAgANAAQAAAACAP7/AgAJAAIAAAALAP7/AgAKAAIAAAA=")
+z_index = 1
+y_sort_enabled = true
+tile_map_data = PackedByteArray("AAAGAAUAAgAJAAIAAAAGAAIAAgAJAAIAAAAGAAMAAgAJAAMAAAAGAAQAAgAJAAEAAAAHAAIAAgAKAAIAAAAHAAMAAgAKAAMAAAAHAAQAAgAKAAEAAAAGAAAAAgAJAAEAAAAGAAEAAgAJAAIAAAAHAAUAAgAKAAIAAAAHAAAAAgAKAAEAAAAHAAEAAgAKAAIAAAADAP//AwANAAQAAAADAAAAAwANAAUAAAAEAP//AwAOAAQAAAAEAAAAAwAOAAUAAAAJAP//AwANAAQAAAAJAAAAAwANAAUAAAAKAP//AwAOAAQAAAAKAAAAAwAOAAUAAAAIAP//AgAFAAEAAAAIAAAAAgACAAQAAAALAP//AgADAAMAAAALAAAAAgADAAQAAAAFAP//AgAHAAEAAAAFAAAAAgAHAAIAAAACAP//AgABAAMAAAACAAAAAgABAAQAAAAGAAYAAgAJAAMAAAAGAAcAAgAMAAMAAAAGAAgAAgAMAAQAAAAHAAYAAgAKAAMAAAAHAAcAAgANAAMAAAAHAAgAAgANAAQAAAACAP7/AgAJAAIAAAALAP7/AgAKAAIAAAAGAP//AgAIAAEAAAAHAP//AgAEAAEAAAA=")
 tile_set = SubResource("TileSet_uwrux")
+
+[node name="Grate" parent="." instance=ExtResource("12_8jcp4")]
+position = Vector2(303, 215)
 
 [node name="Angel" parent="." instance=ExtResource("1_d038w")]
 z_index = 1
-position = Vector2(346, 333)
+position = Vector2(108, 334)
 
 [node name="Slime" parent="." groups=["enemy"] instance=ExtResource("2_4bg67")]
+z_index = 1
 position = Vector2(342, 80)
+collision_layer = 1
+collision_mask = 1
 
 [node name="Player" parent="." instance=ExtResource("3_cnerv")]
 z_index = 1
 position = Vector2(127, 96)
+metadata/_edit_lock_ = true

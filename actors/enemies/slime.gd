@@ -3,14 +3,14 @@ extends CharacterBody2D
 
 enum anim_state {IDLE, LEFT, RIGHT, DEATH}
 
-var speed = 5
+var speed = 0.8
 var player_chase = false
 var player = null
 var current_state = anim_state.IDLE
 
 func _physics_process(delta):
 	if (player_chase):
-		velocity += (player.position - position)/speed
+		velocity = (player.position - position)/speed
 		move_and_slide()
 	
 		if(player.position.x - position.x < 0):

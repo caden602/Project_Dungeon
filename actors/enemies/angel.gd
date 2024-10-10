@@ -21,6 +21,8 @@ func _physics_process(delta):
 func _on_detection_area_body_entered(body:Node2D):
 	player = body
 	player_chase = true
+	add_to_group("angel")
+	add_to_group("enemy")
 
 func _on_detection_area_body_exited(body:Node2D):
 	player = null
@@ -30,5 +32,6 @@ func in_light(state:bool):
 	if (state):
 		player_chase = false
 		remove_from_group("angel")
+		remove_from_group("enemy")
 	else:
 		player_chase = true
