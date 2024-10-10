@@ -176,6 +176,7 @@ radius = 9.0
 height = 18.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_yxfrk"]
+radius = 12.0
 
 [node name="Player" type="CharacterBody2D"]
 y_sort_enabled = true
@@ -249,7 +250,7 @@ target_position = Vector2(793, -184)
 [node name="DetectArea" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DetectArea"]
-position = Vector2(0, -4)
+position = Vector2(0, -3)
 shape = SubResource("CircleShape2D_yxfrk")
 
 [connection signal="animation_finished" from="MainSprite/AnimationPlayer" to="." method="_on_animation_player_animation_finished"]

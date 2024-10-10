@@ -1,7 +1,12 @@
 extends CharacterBody2D
 
+signal healthChanged
+
 @export var projectile_scene: Resource
 @export var move_speed: float = 200.0
+@export var maxHealth = 3
+
+@onready var currentHealth: int = maxHealth
 
 enum anim_state {IDLE, LEFT, RIGHT, UP, DOWN, DEATH}
 
@@ -45,13 +50,15 @@ func _physics_process(delta):
 	move_and_slide()
 
 func _on_detect_area_body_entered(body: Node2D) -> void:
-	player_death(body)
+	player_hurt(body)
 
-func player_death(body):
+func player_hurt(body):
 	if (body.is_in_group("enemy")):
-		print("balls")
-		current_state = anim_state.DEATH
-		$MainSprite/AnimationPlayer.play("death")	
+		currentHealth -= 1
+		healthChanged.emit(currentHealth)
+		if currentHealth <= 0:
+			current_state = anim_state.DEATH
+			$MainSprite/AnimationPlayer.play("death")	
 
 func _on_animation_player_animation_finished(anim_name: StringName) -> void:
 	if (anim_name == "death"):

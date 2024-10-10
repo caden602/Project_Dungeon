@@ -8,3 +8,10 @@ res://lvl1.tscn
 res://actors/enemies/angel.gd
 res://actors/player/player.gd
 res://actors/enemies/slime.gd
+res://UI/hearts_container.tscn
+res://UI/heart.tscn
+res://UI/heartsContainer.tscn
+res://UI/heartGUI.tscn
+res://UI/hearts_container.gd
+res://lvl_1.gd
+res://UI/heart_gui.gd
