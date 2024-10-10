@@ -116,7 +116,7 @@ radius = 260.123
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_d037g"]
 size = Vector2(42, 24)
 
-[node name="Angel" type="CharacterBody2D" groups=["angel"]]
+[node name="Angel" type="CharacterBody2D" groups=["angel", "enemy"]]
 y_sort_enabled = true
 script = ExtResource("1_jlgh8")
 

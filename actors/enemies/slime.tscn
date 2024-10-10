@@ -181,7 +181,7 @@ y_sort_enabled = true
 position = Vector2(0, -6)
 shape = SubResource("CircleShape2D_24bip")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="Sprite2D" type="Sprite2D" parent="." groups=["enemy"]]
 texture_filter = 1
 position = Vector2(0, -6)
 scale = Vector2(1.5, 1.5)

@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://cxhmbcu2y6onb"]
+[gd_scene load_steps=17 format=3 uid="uid://cxhmbcu2y6onb"]
 
 [ext_resource type="Script" path="res://actors/player/player.gd" id="1_hxo5q"]
 [ext_resource type="PackedScene" uid="uid://cpjjhmw4gdy70" path="res://actors/projectile/projectile.tscn" id="2_d25ch"]
@@ -144,9 +144,26 @@ tracks/1/keys = {
 "values": [false]
 }
 
+[sub_resource type="Animation" id="Animation_6ndve"]
+resource_name = "death"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [54, 55, 56]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_kpeyc"]
 _data = {
 "RESET": SubResource("Animation_4xiah"),
+"death": SubResource("Animation_6ndve"),
 "downward_walk": SubResource("Animation_hlp8m"),
 "forward_walk": SubResource("Animation_g43pd"),
 "player_idle": SubResource("Animation_slqxr"),
@@ -157,6 +174,8 @@ _data = {
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_dflf3"]
 radius = 9.0
 height = 18.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_yxfrk"]
 
 [node name="Player" type="CharacterBody2D"]
 y_sort_enabled = true
@@ -189,6 +208,7 @@ libraries = {
 [node name="MainCollider" type="CollisionShape2D" parent="."]
 position = Vector2(0, -3)
 shape = SubResource("CapsuleShape2D_dflf3")
+metadata/_edit_lock_ = true
 
 [node name="ProjectileRefPoint" type="Node2D" parent="."]
 position = Vector2(33, 0)
@@ -225,5 +245,13 @@ target_position = Vector2(786, 161)
 position = Vector2(0, -1)
 target_position = Vector2(793, -184)
 
+[node name="DetectArea" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DetectArea"]
+position = Vector2(0, -4)
+shape = SubResource("CircleShape2D_yxfrk")
+
+[connection signal="animation_finished" from="MainSprite/AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
 [connection signal="body_entered" from="PointLight2D/Area2D" to="PointLight2D" method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="PointLight2D/Area2D" to="PointLight2D" method="_on_area_2d_body_exited"]
+[connection signal="body_entered" from="DetectArea" to="." method="_on_detect_area_body_entered"]

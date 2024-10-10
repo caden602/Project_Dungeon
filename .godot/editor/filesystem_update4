@@ -5,3 +5,6 @@ res://actors/enemies/angel.tscn
 res://grate.tscn
 res://actors/player/light.gd
 res://lvl1.tscn
+res://actors/enemies/angel.gd
+res://actors/player/player.gd
+res://actors/enemies/slime.gd

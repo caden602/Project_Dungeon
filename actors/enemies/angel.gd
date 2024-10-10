@@ -1,15 +1,16 @@
 extends CharacterBody2D
 
-var speed = 50
+var speed = 5
 var player_chase = false
 var player = null
 
 func _ready():
 	$Sprite2D/AnimationPlayer.play("downward_angel")
-
+	
 func _physics_process(delta):
 	if player_chase:
-		position += (player.position - position)/speed
+		velocity = (player.position - position)/speed
+		move_and_slide()
 	
 		if(player.position.x - position.x < 0):
 			$Sprite2D/AnimationPlayer.play("left_angel")
